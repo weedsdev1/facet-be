@@ -106,8 +106,9 @@
       support UX analysis.
     </p>
     <p>
-      This policy explains what data the extension handles, how it is used,
-      where it is sent, and how it is retained.
+      This Privacy Policy explains what data the extension handles, how that
+      data is used, where it is sent, how long it is retained, and how the
+      extension limits its own handling of captured data.
     </p>
 
     <h2>2. Scope and Approved Pages</h2>
@@ -118,96 +119,116 @@
       The extension checks whether the current page is permitted by an
       organization-managed allow-list. Capture and processing occur only on
       pages approved by that policy as part of the Face-T workflow.
+      The extension is not intended to capture data from arbitrary websites
+      outside the approved enterprise workflow.
     </p>
 
     <h2>3. Data Collected</h2>
     <ul>
       <li>
-        <strong>Web page URLs</strong> – used to verify whether the current
-        page is on the organization’s allow-list policy.
+        <strong>Web page URLs</strong> – used to determine whether the current
+        page is permitted by the organization’s allow-list policy.
       </li>
       <li>
         <strong>User interaction events</strong> – including click events and
-        Enter key press events, used to identify the timing of screenshot
-        capture.
+        Enter key press events, used to identify the timing of UX capture.
       </li>
       <li>
-        <strong>Page screenshots (t0 / t1)</strong> – a “before” screenshot is
-        captured at the moment of interaction, and an “after” screenshot is
-        captured once the page finishes rendering.
+        <strong>Page screenshots (t0 / t1)</strong> – including a “before”
+        screenshot captured at the moment of interaction and an “after”
+        screenshot captured after the page finishes updating.
       </li>
       <li>
-        <strong>Extension settings</strong> – including backend URL and local
-        agent URL values required for operation in the enterprise environment.
+        <strong>Extension configuration values</strong> – including backend URL
+        and local agent endpoint settings required for operation in the
+        enterprise environment.
       </li>
     </ul>
 
     <h2>4. How Data Is Used</h2>
     <p>
-      All handled data is used solely for the Face-T workflow, including:
+      Data handled by Face-T Extension is used solely for the Face-T workflow,
+      including:
     </p>
     <ul>
       <li>verifying whether a page is approved for capture;</li>
       <li>correlating user interactions with before-and-after screenshots;</li>
       <li>
         analyzing UX navigation patterns and page transitions within the
-        organization’s web application;
+        organization’s web applications;
       </li>
       <li>supporting diagnostics and operational troubleshooting.</li>
     </ul>
     <p>
-      The data is never used for advertising, profiling, or any purpose
-      unrelated to the extension’s enterprise UX analysis function.
+      Data handled by the extension is not used for advertising, marketing,
+      profiling, or any purpose unrelated to the extension’s enterprise UX
+      analysis function.
     </p>
 
     <h2>5. Data Transmission and Local Processing</h2>
     <p>
-      All captured events and screenshots are transmitted exclusively to a
-      locally running Face-T agent on the user’s own machine.
+      The extension forwards captured interaction events and screenshots only to
+      a Face-T local agent running on the same device as the browser.
       The default local endpoint is:
     </p>
     <p><code>http://127.0.0.1:17777</code></p>
     <p>
-      The extension itself does not send captured screenshots or interaction
-      event data directly to external servers, cloud analytics services, or
-      unrelated third parties.
+      The extension is designed to send captured data only to a local loopback
+      interface on the user’s device. The local agent endpoint is intended to
+      be accessible only from that device and is not intended to be exposed to
+      remote network access as part of the extension’s normal operation.
+    </p>
+    <p>
+      The extension itself does not directly transmit captured screenshots or
+      interaction event data to advertisers, data brokers, public cloud
+      analytics services, or unrelated third-party services.
+    </p>
+    <p>
+      Any processing that occurs after delivery to the local Face-T agent is
+      governed by the enterprise environment operated by the organization.
     </p>
 
     <h2>6. Security</h2>
     <p>
-      Face-T Extension is designed to limit data handling to the approved
-      enterprise workflow described in this policy.
+      Face-T Extension is designed to limit its own data handling to the
+      approved enterprise workflow described in this policy.
     </p>
     <ul>
       <li>
-        screenshot and interaction data are delivered to a local Face-T agent
-        running on the same device;
+        captured screenshots and interaction events are delivered to a local
+        Face-T agent running on the same device;
       </li>
       <li>
         the extension stores only the settings needed for operation, such as
-        backend URL and local agent URL values;
+        backend URL and local agent endpoint values;
       </li>
       <li>
         the extension does not persist screenshots or interaction event data as
-        part of its own long-term storage.
+        part of its own long-term storage;
+      </li>
+      <li>
+        the extension does not use captured data for advertising, sale, or
+        unrelated third-party disclosure.
       </li>
     </ul>
 
     <h2>7. Data Retention</h2>
     <p>
-      The extension itself does not store screenshots or interaction event data
-      persistently beyond extension settings needed for operation.
+      The extension itself does not permanently retain screenshots or
+      interaction event data beyond temporary handling required for the Face-T
+      workflow. The extension stores only configuration values needed for
+      operation.
     </p>
     <p>
       Retention of screenshot and event data after delivery is managed by the
-      local Face-T agent and backend under the control of the enterprise
-      operator.
+      local Face-T agent and any connected enterprise systems under the control
+      of the organization operating the Face-T environment.
     </p>
 
     <h2>8. Third-Party Sharing</h2>
     <p>
-      We do not sell, trade, or transfer user data to advertisers, data
-      brokers, or unrelated third parties.
+      We do not sell, trade, or transfer data handled by the extension to
+      advertisers, data brokers, or unrelated third parties.
     </p>
     <p>
       Data handled by the extension is used only for the enterprise UX analysis
@@ -217,14 +238,14 @@
     <h2>9. Enterprise Administration</h2>
     <p>
       Face-T Extension operates according to organization-managed configuration,
-      including approved page scope, backend settings, and local agent settings.
-      Users should contact their organization or administrator for questions
-      about deployment, approved pages, or operational settings.
+      including approved page scope, backend settings, and local agent
+      settings. Users should contact their organization or administrator for
+      questions about deployment, approved pages, or operational settings.
     </p>
 
     <h2>10. Contact</h2>
     <p>
-      For questions regarding this privacy policy, please contact:
+      For questions regarding this Privacy Policy, please contact:
     </p>
     <p class="contact">weeds.dev1@gmail.com</p>
 
