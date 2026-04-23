@@ -2,75 +2,246 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy – Face-T Extension</title>
   <style>
-    body { font-family: sans-serif; max-width: 760px; margin: 60px auto; padding: 0 24px; color: #222; line-height: 1.7; }
-    h1 { font-size: 1.8rem; border-bottom: 2px solid #4285f4; padding-bottom: 12px; }
-    h2 { font-size: 1.15rem; margin-top: 36px; color: #4285f4; }
-    p, li { font-size: 0.97rem; }
-    ul { padding-left: 20px; }
-    footer { margin-top: 60px; font-size: 0.85rem; color: #888; border-top: 1px solid #eee; padding-top: 16px; }
+    :root {
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #2563eb;
+      --bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 24px 56px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin: 0 0 8px;
+      font-weight: 700;
+    }
+
+    .updated {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    hr {
+      border: 0;
+      border-top: 2px solid var(--accent);
+      margin: 0 0 28px;
+      opacity: 0.9;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      margin: 34px 0 10px;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    ul {
+      margin: 0 0 14px 22px;
+      padding: 0;
+    }
+
+    li {
+      margin: 0 0 8px;
+    }
+
+    code {
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 0.95em;
+    }
+
+    .contact {
+      font-weight: 700;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy – Face-T Extension</h1>
-  <p><strong>Last updated:</strong> April 23, 2026</p>
+  <main class="container">
+    <h1>Privacy Policy – Face-T Extension</h1>
+    <p class="updated"><strong>Last updated:</strong> April 23, 2026</p>
+    <hr />
 
-  <h2>1. Overview</h2>
-  <p>
-    Face-T Extension is an enterprise-grade browser extension that captures
-    user interaction events and page screenshots to help teams analyze UX
-    navigation within their own web applications. This policy describes what
-    data is collected, how it is used, and where it is sent.
-  </p>
+    <h2>1. Overview</h2>
+    <p>
+      Face-T Extension is an enterprise-use browser extension designed to help
+      organizations analyze UX flows within their own web applications.
+      On enterprise-approved web pages, the extension records certain user
+      interaction events and captures before-and-after page screenshots to
+      support UX analysis.
+    </p>
+    <p>
+      This policy explains what data the extension handles, how it is used,
+      where it is sent, and how it is protected.
+    </p>
 
-  <h2>2. Data Collected</h2>
-  <ul>
-    <li><strong>Web page URLs</strong> – used to verify whether the current page is on the organization's allow-list policy.</li>
-    <li><strong>User interaction events</strong> – click and Enter key press events are recorded to mark the timing of screenshots.</li>
-    <li><strong>Page screenshots (t0 / t1)</strong> – a "before" screenshot is captured at the moment of interaction, and an "after" screenshot is captured once the page finishes rendering.</li>
-  </ul>
+    <h2>2. Scope and Approved Pages</h2>
+    <p>
+      Face-T Extension is intended for internal enterprise use.
+    </p>
+    <p>
+      The extension checks whether the current page is permitted by an
+      enterprise-managed allow-list. Capture and processing occur only on pages
+      approved by that policy. The extension is not intended to capture data
+      from arbitrary websites outside the approved enterprise workflow.
+    </p>
 
-  <h2>3. How Data is Used</h2>
-  <p>
-    All collected data is used solely to analyze UX navigation patterns
-    within the organization's web application. The data is never used for
-    advertising, profiling, or any purpose unrelated to the extension's
-    core function.
-  </p>
+    <h2>3. Data Collected</h2>
+    <ul>
+      <li>
+        <strong>Web page URLs</strong> – used to determine whether the current
+        page is permitted by the organization’s allow-list policy.
+      </li>
+      <li>
+        <strong>User interaction events</strong> – including click events and
+        Enter key press events, used to identify the timing of UX captures.
+      </li>
+      <li>
+        <strong>Page screenshots</strong> – including a “before” screenshot
+        captured at the time of interaction and an “after” screenshot captured
+        after the page finishes updating.
+      </li>
+      <li>
+        <strong>Extension configuration values</strong> – such as backend URL
+        and local agent endpoint settings, required for the extension to operate
+        in the enterprise environment.
+      </li>
+    </ul>
 
-  <h2>4. Data Transmission</h2>
-  <p>
-    All data (events and screenshots) is transmitted exclusively to a
-    locally running Face-T agent on the user's own machine
-    (default endpoint: <code>http://127.0.0.1:17777</code>).
-    No data is sent to external servers, cloud services, or any third party.
-  </p>
+    <h2>4. How Data Is Used</h2>
+    <p>
+      The data handled by Face-T Extension is used solely for the following
+      purposes:
+    </p>
+    <ul>
+      <li>determining whether a page is approved for the Face-T workflow;</li>
+      <li>correlating user interactions with before-and-after screenshots;</li>
+      <li>
+        analyzing UX navigation and page transition behavior within the
+        organization’s web applications;
+      </li>
+      <li>
+        supporting troubleshooting and operational diagnostics for the Face-T
+        workflow.
+      </li>
+    </ul>
+    <p>
+      The data is not used for advertising, marketing, user profiling, or any
+      purpose unrelated to the extension’s enterprise UX analysis function.
+    </p>
 
-  <h2>5. Data Retention</h2>
-  <p>
-    The extension itself does not store any data persistently beyond
-    extension settings (backend URL, agent URL). All screenshot and event
-    data retention is managed entirely by the local Face-T agent and
-    backend, under the control of the enterprise operator.
-  </p>
+    <h2>5. Data Transmission and Local Processing</h2>
+    <p>
+      Captured interaction events and screenshots are forwarded only to a
+      Face-T local agent running on the same device as the browser.
+      The default local endpoint is:
+    </p>
+    <p><code>http://127.0.0.1:17777</code></p>
+    <p>
+      The extension is designed to send captured data to a local loopback
+      endpoint on the user’s device as part of the Face-T workflow.
+      The extension itself does not transmit captured screenshots or
+      interaction event data directly to external third-party services,
+      advertisers, or public cloud analytics services.
+    </p>
 
-  <h2>6. Third-Party Sharing</h2>
-  <p>
-    We do not sell, trade, or transfer any user data to third parties.
-    Data does not leave the user's local machine.
-  </p>
+    <h2>6. Security</h2>
+    <p>
+      Face-T Extension is designed to limit data handling to the approved
+      enterprise workflow described above.
+    </p>
+    <ul>
+      <li>
+        captured screenshots and interaction events are sent to a locally
+        running Face-T agent on the same device;
+      </li>
+      <li>
+        the extension stores only configuration values needed for operation,
+        such as backend and agent endpoint settings;
+      </li>
+      <li>
+        the extension does not persist screenshots as part of its own
+        long-term storage.
+      </li>
+    </ul>
+    <p>
+      Security controls for any processing after local delivery are managed by
+      the organization operating the Face-T environment.
+    </p>
 
-  <h2>7. Contact</h2>
-  <p>
-    For questions regarding this privacy policy, please contact:<br/>
-    <strong>weeds.dev1@gmail.com</strong>
-  </p>
+    <h2>7. Data Retention</h2>
+    <p>
+      The extension itself does not permanently retain screenshots or
+      interaction event data. It stores only the configuration values necessary
+      for operation.
+    </p>
+    <p>
+      Retention of screenshots, event data, or any related analysis records
+      after delivery to the local Face-T agent is managed by the organization’s
+      Face-T environment and enterprise operator.
+    </p>
 
-  <footer>
-    &copy; 2026 Face-T. All rights reserved.
-  </footer>
+    <h2>8. Third-Party Sharing</h2>
+    <p>
+      We do not sell, trade, or transfer collected data to advertisers, data
+      brokers, or unrelated third parties.
+    </p>
+    <p>
+      Data handled by the extension is used only for the enterprise UX analysis
+      workflow described in this policy.
+    </p>
+
+    <h2>9. Enterprise Administration</h2>
+    <p>
+      Face-T Extension operates according to organization-managed configuration,
+      including approved page scope, backend settings, and local agent settings.
+      Users should contact their organization or administrator for questions
+      about deployment, approved pages, or operational settings.
+    </p>
+
+    <h2>10. Contact</h2>
+    <p>
+      For questions regarding this privacy policy, please contact:
+    </p>
+    <p class="contact">weeds.dev1@gmail.com</p>
+
+    <footer>
+      © 2026 Face-T. All rights reserved.
+    </footer>
+  </main>
 </body>
 </html>
-
